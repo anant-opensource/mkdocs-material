@@ -1,5 +1,32 @@
-# mkdocs-material-youtube-tutorial
+# mkdocs-material
 
-Supporting code for my YouTube tutorial video:
+## Local server
 
-[![Image.png](https://raw.githubusercontent.com/james-willett/mkdocs-material-youtube-tutorial/main/MkDocsMaterial_GH_Thumbnail.png)](https://www.youtube.com/watch?v=Q-YA_dA8C20)
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install mkdocs-material
+mkdocs serve
+```
+
+## Docker
+
+### Start development server
+
+```
+docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+
+docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material:9.1.4
+
+```
+
+### Build documentation
+
+```
+docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material build
+
+docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material:9.1.4 build
+
+
+
+```

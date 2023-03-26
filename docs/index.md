@@ -22,14 +22,14 @@ def myfunction()
 
 Some more code with the `py` at the start:
 
-``` py
+```py
 import tensorflow as tf
 def whatever()
 ```
 
 #### With a title
 
-``` py title="bubble_sort.py"
+```py title="bubble_sort.py"
 def bubble_sort(items):
     for i in range(len(items)):
         for j in range(len(items) - 1 - i):
@@ -39,7 +39,7 @@ def bubble_sort(items):
 
 #### With line numbers
 
-``` py linenums="1"
+```py linenums="1"
 def bubble_sort(items):
     for i in range(len(items)):
         for j in range(len(items) - 1 - i):
@@ -49,7 +49,7 @@ def bubble_sort(items):
 
 #### Highlighting lines
 
-``` py hl_lines="2 3"
+```py hl_lines="2 3"
 def bubble_sort(items):
     for i in range(len(items)):
         for j in range(len(items) - 1 - i):
@@ -57,12 +57,10 @@ def bubble_sort(items):
                 items[j], items[j + 1] = items[j + 1], items[j]
 ```
 
-## Icons and Emojs
-
-:smile: 
-
-:fontawesome-regular-face-laugh-wink:
-
-:fontawesome-brands-twitter:{ .twitter }
-
-:octicons-heart-fill-24:{ .heart }
+```java linenums="1"
+class Simple{
+    public static void main(String args[]){
+     System.out.println("Hello Java");
+    }
+}
+```

@@ -1,11 +1,21 @@
-site_name: MkDocs YouTube Tutorial
+site_name: MkDocs Material Base
+nav:
+  - Home: "../"
+  - "User Guide": "menu-2.md"
+  - "JIRA":
+      - "Board": "jira/jira.md"
+      - "Bug Report": "http://example.com"
+plugins:
+  - search
 theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
-    - toc.integrate
+    - navigation.path
     - navigation.top
+    - navigation.indexes
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -15,16 +25,16 @@ theme:
   palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline 
+        icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-      primary: teal
-      accent: purple 
-    - scheme: slate 
+      primary: blue
+      accent: indigo
+    - scheme: slate
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode    
-      primary: teal
-      accent: lime
+        name: Switch to light mode
+      primary: blue
+      accent: indigo
 
 extra:
   social:
@@ -38,6 +48,13 @@ extra:
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - admonition
@@ -45,12 +62,10 @@ markdown_extensions:
       generic: true
   - footnotes
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.mark
   - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-
-copyright: |
-  &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">James Willett</a>
+  - admonition
+  - tables
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
